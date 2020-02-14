@@ -98,39 +98,39 @@ public class QuanLyDanhBa {
         Scanner scanner =new Scanner(System.in);
         System.out.println("Moi nhap so dien thoai: ");
         String soDienThoai=scanner.nextLine();
-            for (int i = 0; i < danhBas.size(); i++) {
-                if (danhBas.get(i).getSoDienThoai().contains(soDienThoai)) {
-                    System.out.println("Moi nhap so dien thoai: ");
-                    String soDt = scanner.nextLine();
-                    danhBas.get(i).setSoDienThoai(soDt);
+        for (int i = 0; i < danhBas.size(); i++) {
+            if (danhBas.get(i).getSoDienThoai().equals(soDienThoai)) {
+                System.out.println("Moi nhap so dien thoai: ");
+                String soDt = scanner.nextLine();
+                danhBas.get(i).setSoDienThoai(soDt);
 
-                    System.out.println("Moi nhap ten nhom ");
-                    String tenNhom = scanner.nextLine();
-                    danhBas.get(i).setNhomDanhBa(tenNhom);
+                System.out.println("Moi nhap ten nhom ");
+                String tenNhom = scanner.nextLine();
+                danhBas.get(i).setNhomDanhBa(tenNhom);
 
-                    System.out.println("Moi nhap ho ten: ");
-                    String hoTen = scanner.nextLine();
-                    danhBas.get(i).setHoten(hoTen);
+                System.out.println("Moi nhap ho ten: ");
+                String hoTen = scanner.nextLine();
+                danhBas.get(i).setHoten(hoTen);
 
-                    System.out.println("Moi nhap gioi tinh: ");
-                    String gioiTinh = scanner.nextLine();
-                    danhBas.get(i).setGioiTinh(gioiTinh);
+                System.out.println("Moi nhap gioi tinh: ");
+                String gioiTinh = scanner.nextLine();
+                danhBas.get(i).setGioiTinh(gioiTinh);
 
-                    System.out.println("Moi nhap so dia chi: ");
-                    String diaChi = scanner.nextLine();
-                    danhBas.get(i).setDiaChi(diaChi);
+                System.out.println("Moi nhap so dia chi: ");
+                String diaChi = scanner.nextLine();
+                danhBas.get(i).setDiaChi(diaChi);
 
-                    System.out.println("Moi nhap ngay sinh: ");
-                    String ngaySinh = scanner.nextLine();
-                    danhBas.get(i).setNgaySinh(ngaySinh);
+                System.out.println("Moi nhap ngay sinh: ");
+                String ngaySinh = scanner.nextLine();
+                danhBas.get(i).setNgaySinh(ngaySinh);
 
-                    System.out.println("Moi nhap email: ");
-                    String email = scanner.nextLine();
-                    danhBas.get(i).setEmail(email);
-                    hienThi();
-                }
+                System.out.println("Moi nhap email: ");
+                String email = scanner.nextLine();
+                danhBas.get(i).setEmail(email);
+                hienThi();
             }
         }
+    }
 
     public void xoaDanhBa() {
         Scanner scanner = new Scanner(System.in);

@@ -1,3 +1,4 @@
+import java.util.Objects;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -42,6 +43,19 @@ public class DanhBa {
         this.soDienThoai = soDienThoai;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        DanhBa danhBa = (DanhBa) o;
+        return soDienThoai.equals(danhBa.soDienThoai);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(soDienThoai);
+    }
+
     public String getNhomDanhBa() {
         return nhomDanhBa;
     }
@@ -54,7 +68,7 @@ public class DanhBa {
 //                System.out.println("Nhap sai dinh dang!Moi nhap lai:");
 //                setNhomDanhBa(scanner.nextLine());
 //            }
-            this.nhomDanhBa = nhomDanhBa;
+        this.nhomDanhBa = nhomDanhBa;
     }
 
     public String getHoten() {
@@ -69,7 +83,7 @@ public class DanhBa {
 //                System.out.println("Nhap sai dinh dang!Moi nhap lai:");
 //                this.setHoten(scanner.nextLine());
 //            }
-            this.hoten = hoTen;
+        this.hoten = hoTen;
     }
 
     public String getGioiTinh() {
