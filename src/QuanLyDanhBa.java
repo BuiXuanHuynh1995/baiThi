@@ -94,6 +94,7 @@ public class QuanLyDanhBa {
         hienThi();
     }
 
+
     public void suaDanhBa(){
         Scanner scanner =new Scanner(System.in);
         System.out.println("Moi nhap so dien thoai: ");
@@ -137,7 +138,7 @@ public class QuanLyDanhBa {
         System.out.println("Moi nhap so dien thoai: ");
         String soDienThoai = scanner.nextLine();
         for (int i = 0; i < danhBas.size(); i++) {
-            if (danhBas.get(i).getSoDienThoai().contains(soDienThoai)) {
+            if (danhBas.get(i).getSoDienThoai().equals(soDienThoai)) {
                 danhBas.remove(i);
                 hienThi();
             }else{
